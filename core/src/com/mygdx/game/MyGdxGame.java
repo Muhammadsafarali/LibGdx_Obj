@@ -35,7 +35,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		environment.add(new DirectionalLight().set(0.8f, 0.8f, 0.8f, -1f, -0.8f, -0.2f));
 
 		cam = new PerspectiveCamera(67, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-		cam.position.set(0f,0f,20f);
+		cam.position.set(40f,40f,0f);
 		cam.lookAt(0, 0, 0);
 		cam.near = 1f;
 		cam.far = 300f;
