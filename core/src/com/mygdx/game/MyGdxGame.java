@@ -34,7 +34,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1f));
 		environment.add(new DirectionalLight().set(0.8f, 0.8f, 0.8f, -1f, -0.8f, -0.2f));
 
-		cam = new PerspectiveCamera(100, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		cam = new PerspectiveCamera(67, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		cam.position.set(0f,0f,20f);
 		cam.lookAt(0, 0, 0);
 		cam.near = 1f;
@@ -42,7 +42,10 @@ public class MyGdxGame extends ApplicationAdapter {
 		cam.update();
 
 		ModelLoader loader = new ObjLoader();
-		model = loader.loadModel(Gdx.files.internal("airboat.obj"));
+//		model = loader.loadModel(Gdx.files.internal("airboat.obj"));
+		model = loader.loadModel(Gdx.files.internal("cessna.obj"));
+
+
 		instance = new ModelInstance(model);
 
 		camController = new CameraInputController(cam);
